@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+input[type="search"]::-webkit-search-cancel-button {
+  appearance: none;
+  display: none;
+}
+
+
 .head {
   text-align: center;
   padding: 1rem;
@@ -19,6 +25,7 @@
 }
 
 .searchBar {
+  position: relative;
   width: 15rem;
   border: 3px solid rgb(222, 214, 214);
   background-color: white;
@@ -32,6 +39,14 @@
 .searchBar input {
   border: none;
   outline: none;
+}
+
+.crossButton {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.9rem;
+  font-weight: bolder;
+  cursor: pointer;
 }
 
 .cards-feature-btns {

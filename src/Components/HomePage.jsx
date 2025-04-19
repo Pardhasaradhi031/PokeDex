@@ -1,6 +1,15 @@
 import React from "react";
+import { useState } from "react";
 
 const HomePage = () => {
+  const [searchText, setSearchText] = useState("");
+
+  const handleInputChange = (e) => {
+    setSearchText(e.target.value);
+  }
+  const clearSearch = () => {
+    setSearchText("");
+  }
   return (
     <div className="homeSection">
       <div className="head">
@@ -12,7 +21,8 @@ const HomePage = () => {
           <span class="material-symbols-outlined">
             search
           </span>
-          <input type="search" placeholder="Search Pokemon..."/>
+          <input type="search" id="searchInput" value={searchText} onChange={handleInputChange} placeholder="Search Pokemon..."/>
+          {searchText && <span className="crossButton" onClick={clearSearch}>x</span>}
         </div>
         <div className="cards-feature">
           <button className="cards-feature-btns">Filter</button>
