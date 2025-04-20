@@ -1,11 +1,13 @@
 import './App.css'
-import HomePage from './Components/HomePage'
+import HeaderSection from './Components/HeaderSection'
+import CardsSection from './Components/CardsSection'
 
 function App() {
 
   return (
     <>
-      <HomePage />
+      <HeaderSection />
+      <CardsSection />
     </>
   )
 }

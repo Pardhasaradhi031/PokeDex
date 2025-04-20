@@ -9,7 +9,6 @@ input[type="search"]::-webkit-search-cancel-button {
   display: none;
 }
 
-
 .head {
   text-align: center;
   padding: 1rem;
@@ -56,4 +55,115 @@ input[type="search"]::-webkit-search-cancel-button {
   margin: 0.5rem;
   border-radius: 5rem;
   cursor: pointer;
+}
+
+.PokemonSection {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.PokemonCard {
+  height: 18rem;
+  width: 16rem;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  border-radius: 2rem;
+  margin: 2rem 2rem;
+  padding-bottom: 1rem;
+  border: transparent;
+  box-shadow: 2px 2px 2px 2px #eae8ff;
+  cursor: pointer;
+  transform: scale(1);
+  opacity: 1;
+
+  /* Transition for hover and mount effects */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+.PokemonCard:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.PokemonImage {
+  background-color: #eae8ff;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  border-radius: 1rem 1rem 0 0;
+}
+.PokemonImage img {
+  height: 8rem;
+}
+
+.PokemonName {
+  text-align: center;
+  font-weight: bold;
+  margin: 0.5rem;
+}
+
+.pokemonType {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.PokemonDetails {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 0.5rem;
+}
+
+.PokemonStats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.PokemonTypes {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.viewDetails-btn {
+  position: relative;
+  bottom: 0rem;
+  left: 1rem;
+  margin-top: 1rem;
+}
+
+.viewDetails-btn button {
+  width: 90%;
+  padding: 0.5rem;
+  background-color: #611bf8;
+  color: #fff;
+  border-radius: 5rem;
+  border: transparent;
+}
+
+.pagination {
+  text-align: center;
+}
+
+.pagination-btn {
+  background-color: #611bf8;
+  color: #fff;
+  border: transparent;
+  margin: 2rem;
+  padding: 1rem 4rem;
+  border-radius: 2rem;
+  cursor: pointer;
+
 }

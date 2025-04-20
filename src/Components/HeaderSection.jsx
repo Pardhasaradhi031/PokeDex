@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-const HomePage = () => {
+const HeaderSection = () => {
   const [searchText, setSearchText] = useState("");
 
   const handleInputChange = (e) => {
@@ -11,14 +11,14 @@ const HomePage = () => {
     setSearchText("");
   }
   return (
-    <div className="homeSection">
+    <div>
       <div className="head">
         <h1>Pokémon Collection</h1>
         <p>Explore our extensive collection of Pokémon cards featuring various generations and rarities</p>
       </div>
       <div className="features">
         <div className="searchBar">
-          <span class="material-symbols-outlined">
+          <span className="material-symbols-outlined">
             search
           </span>
           <input type="search" id="searchInput" value={searchText} onChange={handleInputChange} placeholder="Search Pokemon..."/>
@@ -34,4 +34,4 @@ const HomePage = () => {
   )
 }
 
-export default HomePage;
+export default HeaderSection;
