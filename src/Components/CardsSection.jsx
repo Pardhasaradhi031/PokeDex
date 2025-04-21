@@ -14,19 +14,30 @@ const CardsSection = () => {
     setOffset((prev) => Math.max(0, prev - limit))
   }
 
+  const [loading, setLoading] = useState(false);
+  
   useEffect(() => {
     const fetchPokemons = async () => {
       try {
+        setLoading(true);
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`);
         const data = await response.json();
   
         setPokemons(data.results);
       } catch(err) {
         console.log(err);
+      } finally {
+        setLoading(false);
       }
     };
     fetchPokemons();
-  }, [offset]); // <-- Only run once, on mount
+  }, [offset]);
+
+  if (loading) {
+    return (
+      <div className="loader"></div>
+    )
+  }
   
   return (
     <>

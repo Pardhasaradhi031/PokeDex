@@ -167,3 +167,25 @@ input[type="search"]::-webkit-search-cancel-button {
   cursor: pointer;
 
 }
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #611BF8;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

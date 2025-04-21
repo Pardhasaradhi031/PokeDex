@@ -21,7 +21,9 @@ const PokemonCard = ({ name }) => {
         hp: data.stats[0].base_stat,
       })
       return () => {console.log("Finished Fetching!");}
-    } catch (err) {console.log(err);}
+    } catch (err) {
+      console.log(err);
+    }
   }
   fetchPokemon();
   }, [name])
