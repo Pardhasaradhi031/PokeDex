@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getPokemonTypeImage, capitalizeFirst} from "../util/TypeImage";
+import { Link } from "react-router-dom";
 
 const PokemonCard = ({ name }) => {
   const [pokemonDetails, setPokemonDetails] = useState({
@@ -46,7 +47,7 @@ const PokemonCard = ({ name }) => {
         </div>
       </div>
       <div className="viewDetails-btn">
-        <button>View Details</button>
+        <Link to={`/pokemon/${name}`}><button>View Details</button></Link>
       </div>
     </div>
   );

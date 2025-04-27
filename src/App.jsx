@@ -1,13 +1,18 @@
 import './App.css'
-import HeaderSection from './Components/HeaderSection'
-import CardsSection from './Components/CardsSection'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomePage from './Components/PokemonHome/HomePage';
+import PokemonDetails from './Components/Details/PokemonDetails';
 
 function App() {
 
   return (
     <>
-      <HeaderSection />
-      <CardsSection />
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/pokemon/:id' element={<PokemonDetails />} />
+      </Routes>
+    </BrowserRouter>
     </>
   )
 }
